@@ -1,12 +1,11 @@
-body {
 
-}
-
+/* Texto  */
 h1 {
     color: aliceblue;
     text-shadow: 30px;
 }
 
+/*  Imagens dos produtos    */
 .imgProd {
     width: 120px;
     height: 100px;
@@ -16,13 +15,21 @@ h1 {
     margin-left: 10px;
 }
 
-.titleProd{
+/*   Nome dos produtos   */
+.titleProd {
     color: coral;
 }
 
-.backProdutos{background-color: lightgreen;
+/*Cor de fundo da Div dos produtos */
+.backProdutos {
+    background-color: lightcyan;
     border-radius: 5%;
-    padding: 5%;
+    padding: 2%;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+/* Div Resultado, onde aparece o preco */
+.resu {
+    color: coral;
 }

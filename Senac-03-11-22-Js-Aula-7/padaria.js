@@ -1,169 +1,72 @@
-let paoChapa = window.document.getElementById("precoPaoNaChapa");
-let cafe = window.document.getElementById("precoCafe");
-let bolo = window.document.getElementById("precoBolo");
-let pastel = window.document.getElementById("precoPastel");
-let chocolate = window.document.getElementById("precoChocolate");
-let suco = window.document.getElementById("precoSuco");
-let coxinha = window.document.getElementById("precoCoxinha");
-let paoFrances = window.document.getElementById("precoPaoFrances");
 
-let escolha = [paoChapa, cafe, bolo, pastel, chocolate, suco, coxinha, paoFrances];
+
 
 function preco() {
+
+    /* Variaveis ligadas a cada produto da lista */
+    let paoChapa = window.document.getElementById("paoNaChapa");
+    let sonho = window.document.getElementById("sonho");
+    let cafe = window.document.getElementById("cafe");
+    let bolo = window.document.getElementById("bolo");
+    let pastel = window.document.getElementById("pastel");
+    let chocolate = window.document.getElementById("chocolate");
+    let suco = window.document.getElementById("suco");
+    let paoFrances = window.document.getElementById("paoFrances");
+/*-------------------------------------------------------------------*/
+
+/**  Variavel do Switch */
+    let escolha = [paoChapa, sonho, cafe, bolo, pastel, chocolate, suco, paoFrances];
+
+    /** Variavel do resultado */
+    let resultado = window.document.getElementById("precoResultado");
+
+    /** */
+
+    
     switch (escolha) {
         case paoChapa:
-            resultado.innerHTML = `<br>Seu signo e Capricornio!<br><br><img src="./img/capricornio.png" alt="" width="200px">`;
-            console.log("Funciona!");
-            break;
-    }
-}
-
-
-
-
-
-/** 
-let dia = null;
-let mes = null;
-let dtNascimento = null;
-let resultado = window.document.getElementById("signo");
-
-
-function descobrirSigno() {
-
-    dtNascimento = window.document.getElementById("nascimento").valueAsDate;
-    dia = dtNascimento.getUTCDate();
-    mes = dtNascimento.getUTCMonth() + 1;
-
-
-    switch (mes) {
-
-        case 1:
-            if (dia >= 1 && dia <= 20) {
-                resultado.innerHTML = `<br>Seu signo e Capricornio!<br><br><img src="./img/capricornio.png" alt="" width="200px">`;
-                console.log("Capricornio");
-
-            } else if (dia >= 21 && dia <= 31) {
-                resultado.innerHTML = `<br>Seu signo e Aquario!<br><br><img src="./img/aquario.png" alt="" width="200px">`;
-                console.log("Aquario");
-            }
+            resultado.innerHTML = `<h2>R$ 11,55</h2>`;
+            console.log("Pão na chapa!");
             break;
 
-        case 2:
-            if (dia >= 1 && dia <= 19) {
-                resultado.innerHTML = `<br>Seu signo e Aquario!<br><br><img src="./img/aquario.png" alt="" width="200px">`;
-                console.log("Aquario");
-            } else if (dia >= 20 && dia <= 31) {
-                resultado.innerHTML = `<br>Seu signo e Peixes!<br><br><img src="./img/peixes.png" alt="" width="200px">`;
-                console.log("Peixes");
-            }
+        case sonho:
+            resultado.innerHTML = `<h2>R$ 7,50</h2>`;
+            console.log("Sonho!");
             break;
 
-        case 3:
-            if (dia >= 1 && dia <= 20) {
-                resultado.innerHTML = `<br>Seu signo e Peixes!<br><br><img src="./img/peixes.png" alt="" width="200px">`;
-                console.log("Peixes");
-            } else if (dia >= 21 && dia <= 31) {
-                resultado.innerHTML = `<br>Seu signo e Aries!<br><br><img src="./img/aries.png" alt="" width="200px">`;
-                console.log("Aries");
-            }
+        case cafe:
+            resultado.innerHTML = `<h2>R$ 3,90</h2>`;
+            console.log("Café!");
             break;
 
-        case 4:
-            if (dia >= 1 && dia <= 20) {
-                resultado.innerHTML = `<br>Seu signo e Aries!<br><br><img src="./img/aries.png" alt="" width="200px">`;
-                console.log("Aries");
-            } else if (dia >= 21 && dia <= 30) {
-                resultado.innerHTML = `<br>Seu signo e Touro!<br><br><img src="./img/touro.png" alt="" width="200px">`;
-                console.log("Touro");
-            }
+        case bolo:
+            resultado.innerHTML = `<h2>R$ 8,20</h2>`;
+            console.log("Fatia de bolo!");
             break;
 
-        case 5:
-            if (dia >= 1 && dia <= 21) {
-                resultado.innerHTML = `<br>Seu signo e Touro!<br><br><img src="./img/touro.png" alt="" width="200px">`;
-                console.log("Touro");
-            } else if (dia >= 22 && dia <= 31) {
-                resultado.innerHTML = `<br>Seu signo e Gemeos!<br><br><img src="./img/gemeos.png" alt="" width="200px">`;
-                console.log("Gemeos");
-            }
+        case pastel:
+            resultado.innerHTML = `<h2>R$ 4,00</h2>`;
+            console.log("Pastel!");
             break;
 
-        case 6:
-            if (dia >= 1 && dia <= 21) {
-                resultado.innerHTML = `<br>Seu signo e Gemeos!<br><br><img src="./img/gemeos.png" alt="" width="200px">`;
-                console.log("Gemeos");
-            } else if (dia >= 22 && dia <= 30) {
-                resultado.innerHTML = `<br>Seu signo e Cancer!<br><br><img src="./img/cancer.png" alt="" width="200px">`;
-                console.log("Cancer");
-            }
+        case chocolate:
+            resultado.innerHTML = `<h2>R$ 5,30</h2>`;
+            console.log("Chocolate!");
             break;
 
-        case 7:
-            if (dia >= 1 && dia <= 22) {
-                resultado.innerHTML = `<br>Seu signo e Cancer!<br><br><img src="./img/cancer.png" alt="" width="200px">`;
-                console.log("Cancer");
-            } else if (dia >= 23 && dia <= 31) {
-                resultado.innerHTML = `<br>Seu signo e Leao!<br><br><img src="./img/leao.png" alt="" width="200px">`;
-                console.log("Leao");
-            }
+        case suco:
+            resultado.innerHTML = `<h2>R$ 2,00</h2>`;
+            console.log("Sucos diversos!");
             break;
 
-        case 8:
-            if (dia >= 1 && dia <= 23) {
-                resultado.innerHTML = `<br>Seu signo e Leao!<br><br><img src="./img/leao.png" alt="" width="200px">`;
-                console.log("Leao");
-            } else if (dia >= 24 && dia <= 31) {
-                resultado.innerHTML = `<br>Seu signo e Virgem!<br><br><img src="./img/virgem (2).png" alt="" width="200px">`;
-                console.log("Virgem");
-            }
-            break;
-
-        case 9:
-            if (dia >= 1 && dia <= 23) {
-                resultado.innerHTML = `<br>Seu signo e Virgem!<br><br><img src="./img/virgem (2).png" alt="" width="200px">`;
-                console.log("Virgem");
-            } else if (dia >= 24 && dia <= 30) {
-                resultado.innerHTML = `<br>Seu signo e Libra!<br><br><img src="./img/libra.png" alt="" width="200px">`;
-                console.log("Libra");
-            }
-            break;
-
-        case 10:
-            if (dia >= 1 && dia <= 23) {
-                resultado.innerHTML = `<br>Seu signo e Libra!<br><br><img src="./img/libra.png" alt="" width="200px">`;
-                console.log("Libra");
-            } else if (dia >= 24 && dia <= 31) {
-                resultado.innerHTML = `<br>Seu signo e Escorpiao!<br><br><img src="./img/escorpiao.png" alt="" width="200px">`;
-                console.log("Escorpiao");
-            }
-            break;
-
-        case 11:
-            if (dia >= 1 && dia <= 22) {
-                resultado.innerHTML = `<br>Seu signo e Escorpiao!<br><br><img src="./img/escorpiao.png" alt="" width="200px">`;
-                console.log("Escorpiao");
-            } else if (dia >= 23 && dia <= 30) {
-                resultado.innerHTML = `<br>Seu signo e Sagitario!<br><br><img src="./img/sagitario.png" alt="" width="200px">`;
-                console.log("Sagitario");
-            }
-            break;
-
-        case 12:
-            if (dia >= 1 && dia <= 21) {
-                resultado.innerHTML = `<br>Seu signo e Sagitario!<br><br><img src="./img/sagitario.png" alt="" width="200px">`;
-                console.log("Sagitario");
-            } else if (dia >= 22 && dia <= 31) {
-                resultado.innerHTML = `<br>Seu signo e Capricornio!<br><br><img src="./img/capricornio.png" alt="" width="200px">`;
-                console.log("Capricornio");
-            }
+        case paoFrances:
+            resultado.innerHTML = `<h2>R$ 14,99</h2>`;
+            console.log("Pão Francês!");
             break;
 
         default:
-            resultado.innerHTML = `<br><br><b>Signo não registrado</b>`;
-            console.log("<br>Signo não registrado");
+            resultado.innerHTML = `<h3>Por favor escolha algum produto da lista.</h3>`;
+            console.log("Default!");
             break;
     }
-
 }
-*/

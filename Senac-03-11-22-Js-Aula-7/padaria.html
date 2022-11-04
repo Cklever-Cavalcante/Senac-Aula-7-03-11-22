@@ -15,102 +15,81 @@
 <body>
     <center>
         <h1>Seja bem-vindo(a) a nossa padaria!</h1>
+        <!--                   Imagem da padaria                   -->
         <img src="./img/Bakery-Confectionery-Shop-2.png" width="500px" alt="PadariaImg">
+        <!-- ----------------------------------------------------- -->
 
+        <!--                 Div dos produtos                       -->
         <div class="container-fluid backProdutos">
             <div class="row">
                 <div class="col-xs-3 col-sm-3 col-md-3"><img class="shadow-lg rounded-circle imgProd"
                         src="./img/paonachapa.jpg" alt="image1" /><br><br>
                     <h6 class="titleProd">Pão na chapa</h6>
-                    <div id="precoPaoNaChapa"></div> <button type="button" class="btn btn-outline-info"
-                        onclick="preco()">Ver Preço</button>
                 </div>
 
                 <div class="col-xs-3 col-sm-3 col-md-3"><img class="shadow-lg rounded-circle imgProd"
                         src="./img/sonho.jpg" alt="image2" /><br><br>
                     <h6 class="titleProd">Sonho</h6>
-                    <div id="precoSonho"></div>
-                    <button type="button" class="btn btn-outline-info" onclick="preco()">Ver Preço</button>
                 </div>
 
                 <div class="col-xs-3 col-sm-3 col-md-3"><img class="shadow-lg rounded-circle imgProd"
                         src="./img/cafe.jfif" alt="image3" /><br><br>
                     <h6 class="titleProd">Café</h6>
-                    <div id="precoCafe"></div>
-                    <button type="button" class="btn btn-outline-info" onclick="preco()">Ver Preço</button>
                 </div>
 
                 <div class="col-xs-3 col-sm-3 col-md-3"><img class="shadow-lg rounded-circle imgProd"
                         src="./img/bolo.jfif" alt="image3" /><br><br>
                     <h6 class="titleProd">Fatia de bolo</h6>
-                    <div id="precoBolo"></div>
-                    <button type="button" class="btn btn-outline-info" onclick="preco()">Ver Preço</button>
                 </div>
 
                 <div class="col-xs-3 col-sm-3 col-md-3"><img class="shadow-lg rounded-circle imgProd"
                         src="./img/pastel.jfif" alt="image3" /><br><br>
                     <h6 class="titleProd">Pastel</h6>
-                    <div id="precoPastel"></div>
-                    <button type="button" class="btn btn-outline-info" onclick="preco()">Ver Preço</button>
                 </div>
 
                 <div class="col-xs-3 col-sm-3 col-md-3"><img class="shadow-lg rounded-circle imgProd"
                         src="./img/chocolate.jpg" alt="image3" /><br><br>
-                    <h6 class="titleProd">Chocolate quente</h6>
-                    <div id="precoChocolate"></div>
-                    <button type="button" class="btn btn-outline-info" onclick="preco()">Ver Preço</button>
+                    <h6 class="titleProd">Chocolate &#128293;
+                    </h6>
                 </div>
 
                 <div class="col-xs-3 col-sm-3 col-md-3"><img class="shadow-lg rounded-circle imgProd"
                         src="./img/sucos.jfif" alt="image3" /><br><br>
                     <h6 class="titleProd">Sucos diversos</h6>
-                    <div id="precoSuco"></div>
-                    <button type="button" class="btn btn-outline-info" onclick="preco()">Ver Preço</button>
-                </div>
-
-                <div class="col-xs-3 col-sm-3 col-md-3"><img class="shadow-lg rounded-circle imgProd"
-                        src="./img/coxinha.webp" alt="image3" /><br><br>
-                    <h6 class="titleProd">Coxinha</h6>
-                    <div id="precoCoxinha"></div>
-                    <button type="button" class="btn btn-outline-info" onclick="preco()">Ver Preço</button>
                 </div>
 
                 <div class="col-xs-3 col-sm-3 col-md-3"><img class="shadow-lg rounded-circle imgProd"
                         src="./img/paofrances.jpg" alt="image3" /><br><br>
                     <h6 class="titleProd">Pão Francês</h6>
-                    <div id="precoPaoFrances"></div>
-                    <button type="button" class="btn btn-outline-info" onclick="preco()">Ver Preço</button>
                 </div>
             </div>
-        </div><br><br>
+        </div><br>
 
         <!------------------------------------------->
 
-        <div class="input-group mb-3">
-            <select class="custom-select" id="inputGroupSelect02">
-                <option selected>Choose...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            <div class="input-group-append">
-                <label class="input-group-text" for="inputGroupSelect02">Options</label>
-            </div>
+        <!------------------Escolha dos produtos e botao---------------->
+        <div id="precoResultado">
+            <h2 class="resu">Resultado</h2>
         </div>
 
-
-
-        <div class="input-group">
-            <select class="custom-select" id="inputGroupSelect04">
-                <option selected>Choose...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+        <div class="input-group" style="width:500px;">
+            <select class="custom-select" id="selectElem">
+                <option selected>Escolha um produto...</option>
+                <option value="paoNaChapa" id="paoNaChapa">Pão na chapa</option>
+                <option value="sonho" id="sonho">Sonho</option>
+                <option value="cafe" id="cafe">Café</option>
+                <option value="bolo" id="bolo">Fatia de bolo</option>
+                <option value="pastel" id="pastel">Pastel</option>
+                <option value="chocolate" id="chocolate">Chocolate Quente</option>
+                <option value="suco" id="suco">Sucos</option>
+                <option value="paoFrances" id="paoFrances">Pão Francês</option>
             </select>
+            <!------------Botao com function onclick  ------------------>
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Button</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="preco()">Ver Preço</button>
             </div>
         </div>
+        <br><br>
         <!------------------------------------------------------------------>
     </center>
 </body>
